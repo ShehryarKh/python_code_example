@@ -7,11 +7,11 @@ class BST():
         self.right = None
 
     def insert(self, node):
-        print(type(self.left))
         if self.data:
             if node < self.data:
                 if self.left is None:
                     self.left = BST(node)
+
                 else:
                     self.left.insert(node)
             elif node > self.data:
@@ -21,6 +21,29 @@ class BST():
                     self.right.insert(node)
         else:
             self.data = node
+
+
+    def search(self,node, parent=None):
+        if node <self.data:
+            if self.left is None:
+                return None
+            return self.left.search(node,self)
+        elif node > self.data:
+            if self.right is None:
+                return None
+            return self.right.search(node,self)
+        else:
+            return self,parent
+
+    def delete(self, node, parent = None):
+        if self.data:
+            if node < self.data:
+                if self.left is None:
+                    return None
+
+
+
+
 
 
 
