@@ -41,6 +41,16 @@ class BST():
                 if self.left is None:
                     return None
 
+    def all_nodes(self):
+        visited = []
+        if self:
+            if self.left:
+                self.left.all_nodes()
+            visited.append(self.data)
+            if self.right:
+                self.right.all_nodes()
+
+
 
 
 
