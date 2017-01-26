@@ -41,3 +41,10 @@ class LinkedList:
         key.prev.next = key.next
         key.prev = pre
 
+
+    def print_list(key):
+        nodelist = []
+        while key:
+            nodelist.append(key.data)
+            key = key.next
+
