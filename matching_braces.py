@@ -2,7 +2,7 @@ __author__ = 'shehryar'
 
 
 
-def check_balanced_string(str):
+def balanced(str):
   li = []
   braces = {'(': ')', '[': ']', '{': '}'}
 
@@ -16,7 +16,7 @@ def check_balanced_string(str):
         li.pop()
       else:
         return False
-  return not len(li)
+  return True
 
-eq = '{1+[3*5+(2+1)]}'
-print(check_balanced_string(eq))
+eq = '{{]]}'
+print(balanced(eq))
