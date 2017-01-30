@@ -18,5 +18,5 @@ def balanced(str):
         return False
   return True
 
-eq = '{{]]}'
+eq = '{{]]})'
 print(balanced(eq))
